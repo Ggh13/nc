@@ -32,10 +32,10 @@ public class text_plus_bio : MonoBehaviour
     {
         text_bio.text = "+";
         text_bio.text = "+" + bio.ToString();
-        float t = 0.5f;
+        float t = 0;
         while(t <= 1)
         {
-            t += 0.1f;
+            t += 0.00001f;
             yield return new WaitForSeconds(0.1f);
             transform.position = Vector3.Lerp(a: start.transform.position, b: finish.transform.position, t);
             text_bio.color = Color.Lerp(a: start_color, b: finish_color, t);
